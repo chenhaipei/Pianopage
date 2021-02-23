@@ -31,6 +31,62 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script>document.documentElement.className = 'js';</script>
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 24px;
+            background-color: #2a2c36;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 10px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            border: none;
+            outline: none;
+        }
+
+        .button span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            border: none;
+            outline: none;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+            border: none;
+            outline: none;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+            border: none;
+            outline: none;
+        }
+        .button:active {
+            background-color: #141519;
+            transform: translateY(4px);
+            border: none;
+            outline: none;
+        }
+    </style>
 </head>
 <body class="loading">
 <!--<svg class="hidden">-->
@@ -51,20 +107,20 @@
 <main>
     <section class="intro flexy flexy--center">
         <header class="intro__header flexy flexy--row">
-            <!--            <div class="codrops-links">-->
-            <!--                <a class="codrops-icon codrops-icon&#45;&#45;prev" href="http://tympanus.net/Development/TiltHoverEffects/"-->
-            <!--                   title="Previous Demo">-->
-            <!--                    <svg class="icon icon&#45;&#45;arrow">-->
-            <!--                        <use xlink:href="#icon-arrow"></use>-->
-            <!--                    </svg>-->
-            <!--                </a>-->
-            <!--                <a class="codrops-icon codrops-icon&#45;&#45;drop" href="http://tympanus.net/codrops/?p=28980"-->
-            <!--                   title="Back to the article">-->
-            <!--                    <svg class="icon icon&#45;&#45;drop">-->
-            <!--                        <use xlink:href="#icon-drop"></use>-->
-            <!--                    </svg>-->
-            <!--                </a>-->
-            <!--            </div>-->
+<!--                        <div class="codrops-links">-->
+<!--                            <a class="codrops-icon codrops-icon&#45;&#45;prev" href="http://tympanus.net/Development/TiltHoverEffects/"-->
+<!--                               title="Previous Demo">-->
+<!--                                <svg class="icon icon&#45;&#45;arrow">-->
+<!--                                    <use xlink:href="#icon-arrow"></use>-->
+<!--                                </svg>-->
+<!--                            </a>-->
+<!--                            <a class="codrops-icon codrops-icon&#45;&#45;drop" href="http://tympanus.net/codrops/?p=28980"-->
+<!--                               title="Back to the article">-->
+<!--                                <svg class="icon icon&#45;&#45;drop">-->
+<!--                                    <use xlink:href="#icon-drop"></use>-->
+<!--                                </svg>-->
+<!--                            </a>-->
+<!--                        </div>-->
             <!--            <a href="https://github.com/codrops/MusicalInteractions/" class="link-github"-->
             <!--               title="View this Project on GitHub">-->
             <!--                <svg class="icon icon&#45;&#45;github">-->
@@ -74,12 +130,13 @@
         </header>
         <h1 class="intro__title">Doting Music</h1>
         <p></p>
-        <div class="interaction"></div>
+<!--        <div class="interaction"></div>-->
         <p></p>
-        <div>
             <!--        <p class="intro__tagline" style="font-size: 40px" >Let's start</p>-->
-            <a href="#" class="link-more"
-               style="font-size: 40px; color: black;font-family: 方正姚体;">开始创作</a>
+            <!--            <a href="#" class="link-more"-->
+            <!--               style="font-size: 40px; text-shadow: #c3cfda 5px 5px 20px;color: black;font-family: 幼圆;">开始创作 </a>-->
+        <div style="position: relative;pointer-events: auto;">
+            <button class="button"><span>开始创作</span></button>
         </div>
     </section>
     <section class="content content--instrument content--piano content--cursor-dark">
